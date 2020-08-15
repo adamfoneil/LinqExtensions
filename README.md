@@ -6,9 +6,9 @@ I'm certain there are many full-featured and excellent Linq extension libraries 
 # AO.Linq.Extensions.IEnumerableExtensions [IEnumerableExtensions.cs](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L6)
 ## Methods
 - ILookup\<int, T\> [Paginate](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L8)
- (this IEnumerable<T> items, int itemsPerPage)
+ (this IEnumerable<T> items, int itemsPerPage) Splits a list into equal-sized "pages", maintinaing original item order. The last page can be shorter than the rest.
 - ILookup\<int, T\> [Partition](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L26)
- (this IEnumerable<T> items, int partitionCount)
+ (this IEnumerable<T> items, int partitionCount) Splits a list into a fixed number of shorter lists of mostly equal length. Odd partitions will pad the "center" partition.
 
 I went looking for better or compelling `Paginate` implementations, and this [SO answer](https://stackoverflow.com/a/3382769/2023653) is probably my favorite. I found another very similar approach used [here](https://www.davidboike.dev/2010/08/batch-or-partition-a-collection-with-linq/). My approach uses modulus, and for whatever reason I like using `ILookup` as the result.
 
