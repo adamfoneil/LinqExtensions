@@ -6,7 +6,7 @@ I'm certain there are many full-featured and excellent Linq extension libraries 
 # AO.Linq.Extensions.IEnumerableExtensions [IEnumerableExtensions.cs](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L6)
 ## Methods
 - ILookup\<int, T\> [Paginate](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L8)
- (this IEnumerable<T> items, int itemsPerPage) Splits a list into equal-sized "pages", maintinaing original item order. The last page can be shorter than the rest.
+ (this IEnumerable<T> items, int itemsPerPage) Splits a list into equal-sized "pages", maintinaing original item order. The last page can be shorter than the rest. See [test1](https://github.com/adamfoneil/LinqExtensions/blob/master/Testing/LinqTests.cs#L12), [test2](https://github.com/adamfoneil/LinqExtensions/blob/master/Testing/LinqTests.cs#L20), [test3](https://github.com/adamfoneil/LinqExtensions/blob/master/Testing/LinqTests.cs#L29)
 - ILookup\<int, T\> [Partition](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L26)
  (this IEnumerable<T> items, int partitionCount) Splits a list into a fixed number of shorter lists of mostly equal length. Odd partitions will pad the "center" partition. See [test](https://github.com/adamfoneil/LinqExtensions/blob/master/Testing/LinqTests.cs#L38)
 
