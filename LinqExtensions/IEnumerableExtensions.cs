@@ -29,21 +29,25 @@ namespace AO.Linq.Extensions
             int partitionaSize = count / partitionCount;
 
             // need to know if the partitions are unequal
-            bool isOdd = (count % partitionCount) != 0;
+            int padding = count % partitionaSize;
+            bool isOdd = padding != 0;
 
+            // for odd partitions, what is the center?
+            int center = (partitionCount / 2) + 1;
+                       
             // figure out the start and end of each partition (bucket)
             var partitions = Enumerable.Range(0, partitionCount).Select(p =>
             {
                 int start = (p * partitionaSize) + 1;
-                int end = (p + 1) * partitionaSize;
-                // if we're on the last partition and the partitions are odd, we need to pad the end
-                int padding = ((p + 1 == partitionCount) && isOdd) ? count - end : 0;
-                int realEnd = end + padding;
+                if ((p + 1 > center) && isOdd) start += padding;
+
+                int end = (p + 1) * partitionaSize;                
+                if ((p + 1 >= center) && isOdd) end += padding;                
 
                 return new
                 {
                     Index = p,
-                    Range = Enumerable.Range(start, realEnd - start + 1).ToArray()
+                    Range = Enumerable.Range(start, end - start + 1).ToArray()
                 };
             })
             // flatten these ranges into a single sequence

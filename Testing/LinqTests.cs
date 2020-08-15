@@ -42,17 +42,22 @@ namespace Testing
             // even distribution is the easy case
             Assert.IsTrue(partitioned.All(p => p.Count() == 25));
 
-            // this uneven case adds one to the last partition
+            // this uneven case adds one to the center partition
             partitioned = intArray.Partition(3);
             Assert.IsTrue(partitioned.Count() == 3);
             Assert.IsTrue(partitioned[0].Count() == 33);
-            Assert.IsTrue(partitioned[1].Count() == 33);
-            Assert.IsTrue(partitioned[2].Count() == 34);
+            Assert.IsTrue(partitioned[1].Count() == 34);
+            Assert.IsTrue(partitioned[2].Count() == 33);
 
             // this will test a really arbitrary/uneven partition
             partitioned = intArray.Partition(7);
-            var items = partitioned[4].Select(i => i).ToArray();
-            var shouldBe = Enumerable.Range(57, 14).ToArray();
+            var items = partitioned[4].ToArray();
+            var shouldBe = Enumerable.Range(59, 14).ToArray();
+            Assert.IsTrue(items.SequenceEqual(shouldBe));
+
+            // again, center should have padding, in this case 2
+            items = partitioned[3].ToArray();
+            shouldBe = Enumerable.Range(43, 16).ToArray();
             Assert.IsTrue(items.SequenceEqual(shouldBe));
         }
     }
