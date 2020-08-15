@@ -12,4 +12,4 @@ I'm certain there are many full-featured and excellent Linq extension libraries 
 
 I went looking for better or compelling `Paginate` implementations, and this [SO answer](https://stackoverflow.com/a/3382769/2023653) is probably my favorite. I found another very similar approach used [here](https://www.davidboike.dev/2010/08/batch-or-partition-a-collection-with-linq/). My approach uses modulus, and for whatever reason I like using `ILookup` as the result.
 
-The `Partition` method has stumped me in the past, and I wanted to write my own version of it.
+The `Partition` method has stumped me in the past, and I wanted to write my own version of it. I got some ideas from this [SO question](https://stackoverflow.com/questions/3892734/split-c-sharp-collection-into-equal-parts-maintaining-sort), but I didn't care for any of the solutions. So, like I said, this is stuff I like to try.
