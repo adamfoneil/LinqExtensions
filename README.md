@@ -1,3 +1,5 @@
+[![Nuget](https://img.shields.io/nuget/v/AO.Linq.Extensions)](https://www.nuget.org/packages/AO.Linq.Extensions/)
+
 # AO.Linq.Extensions.IEnumerableExtensions [IEnumerableExtensions.cs](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L6)
 ## Methods
 - ILookup\<int, T\> [Paginate](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L8)
