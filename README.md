@@ -3,6 +3,8 @@
 
 I'm certain there are many full-featured and excellent Linq extension libraries out there. In fact [morelinq](https://www.nuget.org/packages/morelinq) comes to mind, though I haven't actually used it. As usual, this is something I simply enjoy working on, and wanted more practice setting up builds in AppVeyor.
 
+My other motivation for creating this is that it helped me build some examples for the chapter I'm writing on Linq for [Packt's](https://www.packtpub.com/) upcoming title **The C# Workshop** to which I'm contributing.
+
 # AO.Linq.Extensions.IEnumerableExtensions [IEnumerableExtensions.cs](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L6)
 ## Methods
 - ILookup\<int, T\> [Paginate](https://github.com/adamfoneil/LinqExtensions/blob/master/LinqExtensions/IEnumerableExtensions.cs#L8)
