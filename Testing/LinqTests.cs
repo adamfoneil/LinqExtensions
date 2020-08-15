@@ -59,6 +59,8 @@ namespace Testing
             items = partitioned[3].ToArray();
             shouldBe = Enumerable.Range(43, 16).ToArray();
             Assert.IsTrue(items.SequenceEqual(shouldBe));
+
+            Assert.IsTrue(partitioned.SelectMany(page => page).Count() == 100);
         }
     }
 }
