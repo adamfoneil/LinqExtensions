@@ -6,7 +6,7 @@ using AO.Linq.Extensions;
 namespace Testing
 {
     [TestClass]
-    class LinqTests
+    public class LinqTests
     {
         [TestMethod]
         public void PaginateSimpleTest()
