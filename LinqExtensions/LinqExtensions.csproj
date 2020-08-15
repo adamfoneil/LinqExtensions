@@ -6,6 +6,18 @@
     <PackageId>AO.Linq.Extensions</PackageId>
     <Authors>Adam O'Neil</Authors>
     <Product>AO.Linq.Extensions</Product>
+    <Description>Some IEnumerable extension methods: Paginate, Partition</Description>
+    <Copyright>Copyright (c) 2020 Adam O'Neil</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/adamfoneil/LinqExtensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/adamfoneil/LinqExtensions</RepositoryUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
